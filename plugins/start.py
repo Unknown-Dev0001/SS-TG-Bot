@@ -14,11 +14,12 @@ async def start(bot: Client, msg: Message):
             chat_id=LOG_CHANNEL, 
             text=f"**#NewUser\n\n👤 {msg.from_user.mention}**\n\nID - `{msg.from_user.id}`"
         )
-    if IS_FSUB and not await get_fsub(bot, msg):return
+    if IS_FSUB and not await get_fsub(bot, msg): return
 
     await bot.send_message(
         chat_id=msg.chat.id,
-        text=f"""{msg.from_user.mention},\n\nɪ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ ꜱᴛʀɪɴɢ ꜱᴇꜱꜱɪᴏɴ\n\nᴜꜱᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴛʀɪɴɢ sᴇssɪᴏɴ\n\n<blockquote><b>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/Unknown_RK01'>Rᴀᴠɪ Kᴜᴍᴀʀ</a></b></blockquote>""",
+        text=f"""{msg.from_user.mention},\n\nɪ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ ꜱᴛʀɪɴɢ ꜱᴇꜱꜜɪᴏɴ\n\nᴜꜱᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴛʀɪɴɢ sᴇssɪᴏɴ\n\n<blockquote><b>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/Unknown_RK01'>Rᴀᴠɪ Kᴜᴍᴀʀ</a></b></blockquote>""",
+        disable_web_page_preview=True,  # Disable web preview
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ", callback_data="generate")]
         ])
