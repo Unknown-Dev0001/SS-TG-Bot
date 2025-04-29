@@ -1,4 +1,4 @@
-from config import *
+import config
 from telethon import TelegramClient
 from pyrogram import Client, filters
 from asyncio.exceptions import TimeoutError
